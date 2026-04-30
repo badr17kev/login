@@ -1,14 +1,13 @@
-.screen {
+.login-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   min-height: 100vh;
   padding: 20px;
-  background-color: var(--bg-main);
 }
 
-.card {
+.container {
   display: flex;
   width: 100%;
   max-width: 1100px;
@@ -20,7 +19,7 @@
 }
 
 @media (max-width: 850px) {
-  .card {
+  .container {
     flex-direction: column;
     max-width: 450px;
     min-height: auto;

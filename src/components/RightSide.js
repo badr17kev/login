@@ -1,41 +1,44 @@
+import React from 'react';
 import './rightside.css';
+import { FaBehance, FaGoogle, FaFacebook } from 'react-icons/fa';
 
 export default function RightSide() {
   return (
-    <div className="right-part">
-      <div className="top-star">*</div>
-      <div className="header-text">
+    <div className="right-side">
+      <div className="asterisk-icon">*</div>
+      <div className="form-header">
         <h3>Create an account</h3>
         <p>Access your tasks, notes, and projects anytime, anywhere - and keep everything flowing in one place.</p>
       </div>
-
-      <form className="my-form">
-        <div className="field">
+      
+      <form className="login-form">
+        <div className="input-group">
           <label htmlFor="email">Your email</label>
           <input type="email" id="email" name="email" placeholder="farazhaidet786@gmail.com" />
         </div>
-
-        <div className="field">
+        
+        <div className="input-group">
           <label htmlFor="password">Password</label>
-          <div className="pass-box">
+          <div className="password-wrapper">
             <input type="password" id="password" name="password" placeholder="••••••••••••" />
+            <span className="eye-icon">👁️</span>
           </div>
         </div>
-
-        <button type="submit" className="main-btn">Get Started</button>
+        
+        <button type="submit" className="submit-btn">Get Started</button>
       </form>
 
-      <div className="line-break">
+      <div className="divider">
         <span>or continue with</span>
       </div>
 
-      <div className="socials">
-        <button className="social-item">Bē</button>
-        <button className="social-item">G</button>
-        <button className="social-item">f</button>
+      <div className="social-auth">
+        <button className="social-btn" type="button"><FaBehance size={20} /></button>
+        <button className="social-btn" type="button"><FaGoogle size={20} /></button>
+        <button className="social-btn" type="button"><FaFacebook size={20} /></button>
       </div>
 
-      <p className="bottom-link">
+      <p className="footer-note">
         Don't have an account? <a href="#signup">Sign up</a>
       </p>
     </div>
