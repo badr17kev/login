@@ -1,0 +1,138 @@
+.right-part {
+  flex: 1.2;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+}
+
+.top-star {
+  font-size: 40px;
+  color: #4a3aff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.header-text h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.header-text p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 320px;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.field input {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #4a3aff;
+}
+
+.pass-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pass-box input {
+  width: 100%;
+}
+
+.main-btn {
+  margin-top: 10px;
+  padding: 16px;
+  background: linear-gradient(to right, #4a3aff, #6a5aff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(74, 58, 255, 0.2);
+}
+
+.line-break {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  color: #bbb;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.social-item {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.bottom-link {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+.bottom-link a {
+  color: #4a3aff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .right-part {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .right-part {
+    padding: 60px 24px;
+  }
+}
