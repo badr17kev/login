@@ -1,6 +1,6 @@
 .left-side {
   flex: 1;
-  padding: 12px;
+  padding: 16px;
   display: flex;
 }
 
@@ -9,35 +9,84 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: calc(var(--radius) - 8px);
   position: relative;
-  padding: 40px;
+  padding: 60px 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
   overflow: hidden;
+  background-color: #333; /* Fallback */
+  border: 1px solid transparent;
+  transition: var(--transition);
 }
 
-.asterisk {
-  font-size: 60px;
-  font-weight: 300;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.9);
+.dark-theme .inner-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, #1a1a2e 0%, #13131f 100%);
 }
 
-.bottom-text h2 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-top: 10px;
-  color: white;
+.dark-theme .inner-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  pointer-events: none;
 }
 
-.small-text {
-  font-size: 14px;
+.dark-theme .content-overlay {
+  z-index: 2;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.nebula-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  z-index: -1;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.DownSide h5 {
+  font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.DownSide h3 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 12px;
+  color: white;
+  letter-spacing: -0.02em;
 }
 
 @media (max-width: 850px) {

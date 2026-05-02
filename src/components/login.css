@@ -4,24 +4,93 @@
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  padding: 20px;
+  background-color: var(--bg-page);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Blobs */
+.bg-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  filter: blur(100px);
+  opacity: 0.6;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  animation: move 20s infinite alternate;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: hsla(245, 100%, 60%, 0.2);
+  top: -100px;
+  left: -100px;
+  animation-duration: 25s;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: hsla(280, 100%, 60%, 0.15);
+  bottom: -50px;
+  right: -50px;
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: hsla(220, 100%, 50%, 0.1);
+  top: 40%;
+  left: 30%;
+  animation-duration: 20s;
+  animation-delay: -10s;
+}
+
+@keyframes move {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(100px, 100px) scale(1.1); }
 }
 
 .container {
   display: flex;
   width: 100%;
-  max-width: 1100px;
-  min-height: 700px;
+  max-width: 1120px;
+  min-height: 720px;
   background-color: var(--bg-card);
+  backdrop-filter: var(--glass);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-premium);
+  border: 1px solid var(--border-glass);
+  position: relative;
+  z-index: 1;
+}
+
+.dark-theme .bg-blobs {
+  opacity: 0.3;
+}
+
+.dark-theme .container {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 40px; /* Slightly more rounded for premium feel */
 }
 
 @media (max-width: 850px) {
   .container {
     flex-direction: column;
-    max-width: 450px;
+    max-width: 480px;
     min-height: auto;
+    margin: 20px;
   }
 }
