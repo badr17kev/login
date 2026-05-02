@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaBehance, FaGoogle, FaFacebook } from 'react-icons/fa';
 import './rightside.css';
 

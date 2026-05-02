@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LeftSide from './LeftSide';
 import RightSide from './RightSide';
 import './login.css';

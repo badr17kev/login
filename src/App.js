@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Login from './components/Login';
 import { IoSunny, IoMoon } from 'react-icons/io5';
@@ -24,7 +24,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className="noise-overlay"></div>
       <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
         {isDarkMode ? <IoSunny size={22} /> : <IoMoon size={22} />}
       </button>

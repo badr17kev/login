@@ -1,4 +1,3 @@
-import React from 'react';
 import './leftside.css';
 
 export default function LeftSide() {
